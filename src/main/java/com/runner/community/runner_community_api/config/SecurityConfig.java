@@ -17,7 +17,7 @@ public class SecurityConfig  {
         return http.cors().and()
                 .csrf().disable().sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-                .authorizeHttpRequests().requestMatchers("/api/**").permitAll().and().build();
+                .authorizeHttpRequests().requestMatchers("/api/**","/swagger-ui/**", "/v3/api-docs/**","/swagger-resources/**").permitAll().and().build();
     }
 
 }

@@ -10,7 +10,6 @@ import com.runner.community.runner_community_api.error.CustomException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.ZonedDateTime;
@@ -18,7 +17,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @RequestMapping("/api/member/*")
-@Controller
+@RestController
 public class MemberController {
 
     @Autowired
